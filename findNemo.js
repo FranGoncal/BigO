@@ -1,3 +1,6 @@
+//     O(n) ---> Linear Time
+
+
 const vazio = [];
 const nemo = ['nemo'];
 const everyone = ['dory', 'bruce', 'marlin', 'nemo', 'gill', 'bloat', 'nigel', 'squirt', 'darla', 'hank'];
@@ -7,34 +10,12 @@ const large = new Array(1000).fill('nemo');
 const veryLarge = new Array(100000).fill('nemo');
 
 function findNemo(array) {
-    let t0 = performance.now();
     for (let i = 0; i < array.length; i++) {
         if (array[i] === 'nemo') {
             //console.log("Found nemo!")
         }
     }
-    let t1 = performance.now();   
-    console.log("Call to find Nemo took "+ (t1-t0).toFixed(3) + " miliseconds.")
 }
-
-
-//time comparasion//
-console.log("Time comparasion:")
-
-//avg:  0.002ms
-findNemo(nemo);
-
-//avg:  0.003ms
-findNemo(everyone);
-
-//avg:  0.129
-findNemo(large);
-
-//avg:  3.521ms
-findNemo(veryLarge);
-
-
-
 
 
 /*
@@ -51,4 +32,11 @@ Instead of focusing on small-scale runtime comparisons,
 we should evaluate code based on its scalability and maintainability.
 Scalable code is designed to perform efficiently as the workload grows and is typically more robust and adaptable in real-world scenarios.
 
+BigO can compare how scalable code can be regardless of performance differences.
 */
+
+findNemo(veryLarge); 
+
+
+
+
